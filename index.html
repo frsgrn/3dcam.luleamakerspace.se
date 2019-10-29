@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>Bild på 3D-skrivare</title>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+		<h1>Bild på 3D-skrivare</h1>
+		<h2>Uppdateras var 5:e minut...</h2>
+	</div>
+		<a href="http://92.32.41.182:8080/latest.jpg"><img id="hero" src="http://92.32.41.182:8080/latest.jpg"></img></a>
+		</div>
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Nunito:400,700,900&display=swap');
+			#hero {
+				position: relative;
+				width: 100%;
+				margin: 5px;
+				border-radius: 25px;
+				border-bottom: 5px solid #cacaff87;
+				top: 0;
+				transition: top 0.3s ease;
+  			}
+			#hero:hover {
+				top: -7px;
+			}
+			.container {
+				text-align: center;
+				margin: auto;
+				padding: 10px;
+				max-width: 800px;
+			}
+			h1 {
+				font-weight: 700;
+				margin-bottom: 0px;
+				text-align: left;
+			}
+			h2 {
+				margin-top: 0px;
+				font-size: 17px;
+				text-align: left;
+			}
+			.header {
+				padding-left: 15px;
+			}
+			body {
+				text-align: center;
+				font-family: 'Nunito', sans-serif;
+			}
+		</style>
+		<script>
+			setInterval(function(){
+				$("#hero").attr("src", "http://92.32.41.182:8080/latest.jpg" + "?rand=" + Math.random());
+			},30000);
+		</script>
+	</body>
+</html>
