@@ -54,9 +54,16 @@
 			}
 		</style>
 		<script>
-			setInterval(function(){
+			
+			function updateImage() {
 				$("#hero").attr("src", "http://92.32.115.74:8080/latest.jpg" + "?rand=" + Math.random());
+			}
+			
+			setInterval(function(){
+				updateImage();
 			},61111);
+			
+			updateImage();
 		</script>
 	</body>
 </html>
